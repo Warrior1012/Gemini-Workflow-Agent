@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audio-to-Task Assistant — SpeakSpace Action (Frontend)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Audio-to-Task Assistant</h1>
+      <p class="tagline">Voice Note → Task Extraction (Gemini) → Automated Backend Schedule</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Select / Paste Note</h2>
+        <div class="row">
+          <div class="col">
+            <label class="file-upload">
+              <input id="audioFile" type="file" accept="audio/*" />
+              📁 Upload voice note
+            </label>
+            <small>Or paste transcribed note below.</small>
+          </div>
+          <div class="col">
+ <textarea id="noteText" placeholder="Transcribed text will appear here (or paste it)"></textarea>
+<div class="controls">
+    <button id="browserSpeechBtn">Use Browser Speech → Transcribe (optional)</button>
+    <button id="clearBtn">Clear</button>
+</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2. Extract Tasks</h2>
+        <p>Click <b>Extract Tasks</b> to send the text to the Gemini Function Calling endpoint on your server.</p>
+        <div class="row">
+          <button id="extractBtn" class="primary">Extract Tasks & Trigger Backend Schedule</button>
+        </div>
+        <div id="tasksArea" class="tasks-area">
+                  </div>
+      </section>
+
+      <section class="card">
+        <h2>3. Scheduled Reminders (Backend Confirmation)</h2>
+        <p class="description">
+          Your server automatically attempted to schedule reminders for tasks with dates/times. Check the **Node.js console** for confirmation of scheduled jobs.
+        </p>
+        <div class="row">
+          <button id="exportJsonBtn" class="secondary">Export Extracted Tasks (JSON)</button>
+        </div>
+        <div id="scheduleArea" class="tasks-area">
+                  </div>
+      </section>
+
+      <section class="card small">
+        <h2>4. SpeakSpace Action Config (Sample)</h2>
+        <pre id="configSample"></pre>
+      </section>
+
+      <footer>
+        <small>Built for the SpeakSpace Annual Hackathon.</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  </body>
+</html>
+
+  

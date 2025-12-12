@@ -1,0 +1,12 @@
+﻿{
+  "title": "Save Note -> Extract Tasks",
+  "description": "Convert voice note to tasks and reminders (demo).",
+  "prompt_template": "$PROMPT",
+  "notes_selector": "selected_note",
+  "api_url": "https://hackathon-2-backend-production.up.railway.app/process",
+  "authorization": {
+    "type": "header",
+    "header_name": "x-api-key",
+    "header_value": "test_key_123"
+  }
+}
