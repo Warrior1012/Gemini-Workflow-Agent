@@ -25,7 +25,7 @@ Follow these steps to set up and run the backend server and frontend UI.
     npm install
     ```
 
-2.  **Environment Variables:** Create a file named **`.env`** in the root directory and populate it using the template below.
+2.  **Environment Variables:** Create a file named **`.env`** in the backend directory and populate it using the template below.
 
     #### `.env` File Template (Copy-Paste)
 
