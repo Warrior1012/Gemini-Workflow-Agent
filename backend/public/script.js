@@ -1,7 +1,7 @@
 // ==========================================================
 // 1. CONFIG AND GLOBAL VARIABLES & DOM SELECTION
 // ==========================================================
-const API_BASE = "http://localhost:3000";
+const API_BASE = "";
 const CLIENT_API_KEY = "test_key_123";
 
 let currentExtractedTasks = [];
