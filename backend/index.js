@@ -208,7 +208,7 @@ async function workerLoopOnce() {
 setInterval(() => { workerLoopOnce().catch(e => console.error('workerLoop crash', e)); }, 700);
 
 // friendly root page
-app.get('/', (req, res) => res.send('SpeakSpace Hackathon backend is live. Use /health or POST /process.'));
+app.use(express.static(path.join(__dirname, 'public')));  app.get('/', (req, res) => {   res.sendFile(path.join(__dirname, 'public', 'index.html')); });
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
